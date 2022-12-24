@@ -1,16 +1,14 @@
 import java.util.*;
+public class Veteriner extends Kullanıcılar {
+    int tecrübe;
+    Veteriner(){
 
-public class BarinakSahibi extends Kullanıcılar  {
-        BarinakSahibi(){
-            
-        }
-
-        BarinakSahibi(String ad, String soyad ,String mail ,int telefonno ,int sifre){
-            super(ad, soyad, mail, sifre, telefonno);
-        }
-
-        
-        @Override
+    }
+    Veteriner(String ad, String soyad ,String mail ,int telefonno ,int sifre,int tecrübe){
+        super(ad, soyad, mail, sifre, telefonno);
+        this.tecrübe=tecrübe;
+    }
+    @Override
         public void uyekayit(){
             Scanner klavye = new Scanner(System.in);
             System.out.println("Adinizi giriniz;");
@@ -23,6 +21,8 @@ public class BarinakSahibi extends Kullanıcılar  {
             this.mail=klavye.next();
             System.out.println("sifrenizi giriniz;");
             this.sifre=klavye.nextInt();
+            System.out.println("Kac yıldır bu isle ugrasiyorsunuz;");
+            this.tecrübe=klavye.nextInt();
         }
         @Override
         public void uyegiris(){
@@ -49,14 +49,18 @@ public class BarinakSahibi extends Kullanıcılar  {
         }
         @Override
         public void islemler(){
-            System.out.println("Barınak eklemek için 1'i tuslayiniz.");
-            System.out.println("Barınak bilgileri goruntulemek için 2'i tuslayiniz.");
-            System.out.println("Sokak köpeklerini goruntulemek için 3'ü tuslayiniz. ");
-            System.out.println("Hayvan sahiplenmek isteyen kullanicileri görüntülemek için 4'ü tuslayiniz.");
-            System.out.println("Veterinerleri görüntülemek için 5'e basınız.");
+            System.out.println("Hasta köpekleri görüntülemek için 1'e basınız.");
+            System.out.println("Barınakları görüntülemek için 2'e tıklayınız.");
         }
+        public void veterinerbilgilerigoruntule(){
+            System.out.println("Adı:" +this.ad);
+            System.out.println("Soyadı:" +this.soyad);
+            System.out.println("Mail:" +this.mail);
+            System.out.println("Telefon no:" +this.telefonno);
+            System.out.println("Tecrübesi:" +this.tecrübe);
+         
     
-       
-    }
+        }
+      
     
-    
+}

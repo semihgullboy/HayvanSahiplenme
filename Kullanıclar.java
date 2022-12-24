@@ -1,6 +1,6 @@
 abstract class Kullanıcılar {
     public String ad ,soyad , mail;
-    public int sifre ,telefonno;
+    public int sifre, telefonno;
 
     
     public Kullanıcılar() {
@@ -16,5 +16,5 @@ abstract class Kullanıcılar {
     public abstract void uyekayit();
     public abstract void uyegiris();
     public abstract void setsifredegistirme();
-    public abstract int getyenisifre();
+    public abstract void islemler();
 }
